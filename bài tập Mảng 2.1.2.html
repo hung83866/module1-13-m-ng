@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập 1 dãy số và thêm dấu - vào giữa 2 số chẵn</title>
+</head>
+<body>
+<script>
+    let num= prompt('nhập số');
+    let array = num.toString();
+    let result = [array[0]];
+    for (let x=1;x<array.length;x++){
+        if ((array[x-1]%2==0)&&(array[x]%2==0)){
+            result.push('-',array[x]);
+        }else {
+            result.push(array[x]);
+        }
+    }
+document.write(result.join(''))
+</script>
+</body>
+</html>
