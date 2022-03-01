@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+<input id="value" type="number">
+<input id="add" type="button" value="Add" onclick="nhapMang()">
+<input id="result"  type="button" value="result" onclick="ketqua()">
+<p id="inra"></p>
+<script>
+    let x=0;
+    let array = Array();
+function nhapMang(){
+    array[x] = +document.getElementById('value').value;
+    x++;
+    document.getElementById('value').value = "";
+}
+
+    console.log(array)
+function ketqua(){
+    let i=1;
+    let max=array[0];
+    for (;i<array.length;i++){
+        if (max<array[i]){
+            max = array[i];
+        }
+    }
+document.getElementById('inra').innerHTML = 'số lớn nhất trong dãy là : '+max;
+}
+</script>
+</body>
+</html>
