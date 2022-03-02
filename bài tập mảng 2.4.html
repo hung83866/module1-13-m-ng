@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea on Typing</title>
+</head>
+<body>
+<center>
+    <h2>Type anthing slowly</h2>
+    <form name="hung">
+        <textarea name="txt" cols="40" rows="10" onkeydown="viet()"></textarea>
+    </form>
+</center>
+<script>
+    let a=new Array(),n="";
+    a[1]='H';a[2]='U';a[3]='N';a[4]='G';a[5]=' ';a[6]='T';a[7]='H';a[8]='Ậ';a[9]='T';a[10]=' ';a[11]='Đ';a[12]='Ẹ';a[13]='P';a[14]=' ';a[15]='Z';a[16]='A';a[17]='I';a[18]=' ';a[19]='A';a[20]='H';a[21]='I';a[22]='I';
+    function viet(){
+        t = document.hung.txt.value;
+        j = t.length;
+        if(j > 0)
+        {
+            for(var i=1; i<=j; i++)
+            {
+                n = n + a[i];
+                if(i == 22)
+                {
+                    document.hung.txt.value = "";
+                    n = "";
+                }
+            }
+        }
+        document.hung.txt.value = n;
+        n="";
+        setTimeout("viet()", 1);
+        //return false;
+    }
+</script>
+</body>
+</html>
